@@ -1,3 +1,16 @@
 = SpecSupport
 
-This project rocks and uses MIT-LICENSE.
+After building a factory that fills out all the
+attributes (columns) of an ActiveRecord model,
+I want to make sure all attributes/columns
+actually have data.
+
+This aids in avoiding the gotcha where a belongs_to
+has a name that is not exactly matching with the _id
+column, which goes undetected in many naive tests
+(a simple build on the belongs_to will pass, a save
+will pass, a reload and reading back the belongs_to
+will pass and indicate correct values (because
+reload does not touch values that are not actually
+columns). Reading all the _id columns is one way
+to detect this issue.
