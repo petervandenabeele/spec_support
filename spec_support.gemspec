@@ -7,11 +7,12 @@ require "spec_support/version"
 Gem::Specification.new do |s|
   s.name        = "spec_support"
   s.version     = SpecSupport::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SpecSupport."
-  s.description = "TODO: Description of SpecSupport."
+  s.platform    = Gem::Platform::RUBY
+  s.authors     = ["Peter Vandenabeele"]
+  s.email       = ["peter@vandenabeele.com"]
+  s.homepage    = "http://github.com/petervandenabeele/spec_support"
+  s.summary     = "spec/support for common cases"
+  s.description = "Add useful spec/support functionalities that come back in each project"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
