@@ -1,0 +1,2 @@
+module SpecSupport
+end
