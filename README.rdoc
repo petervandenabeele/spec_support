@@ -19,7 +19,7 @@ to detect this issue.
 
 Example usage:
 
-```ruby
+``ruby
 describe Contact do
 
   context "has all columns for a full factory" do
@@ -29,4 +29,4 @@ describe Contact do
   end
 
 end
-```
+``
