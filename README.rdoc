@@ -24,7 +24,7 @@ Example usage:
     context "has all columns for a full factory" do
       contact = FactoryGirl.create(:full_contact)
       contact = Contact.find(contact.id)
-     check_all_columns(contact)
-   end
+      check_all_columns(contact)
+    end
 
   end
