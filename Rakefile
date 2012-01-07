@@ -7,8 +7,8 @@ end
 
 Bundler::GemHelper.install_tasks
 
-task :spec do
+task :test do
   system 'rspec spec'
 end
 
-task :default => :spec
+task :default => :test
