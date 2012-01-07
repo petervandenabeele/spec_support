@@ -1,5 +1,7 @@
 = SpecSupport
 
+= check_all_columns
+
 After building a factory that fills out all the
 attributes (columns) of an ActiveRecord model,
 I want to make sure all attributes/columns
@@ -14,3 +16,17 @@ will pass and indicate correct values (because
 reload does not touch values that are not actually
 columns). Reading all the _id columns is one way
 to detect this issue.
+
+Example usage:
+
+```ruby
+describe Contact do
+
+  context "has all columns for a full factory" do
+    contact = FactoryGirl.create(:full_contact)
+    contact = Contact.find(contact.id)
+    check_all_columns(contact)
+  end
+
+end
+```
