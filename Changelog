@@ -1,0 +1,8 @@
+0.0.3 2012-02-01
+
+* Remove the 'it' so 'it' can be placed higher up to catch interrupts
+* Remove the Gemfile.lock, add it to .gitignore and rm empty dir
+
+0.0.2 2011-12-..
+
+* first published version
