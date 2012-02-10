@@ -15,9 +15,7 @@ Gem::Specification.new do |s|
   s.description = "Add useful spec/support functionalities that come back in each project"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rspec"
-
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec"
 end
