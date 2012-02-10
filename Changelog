@@ -1,3 +1,8 @@
+0.0.4 2012-02-10
+
+* add a delete_nil_values function on Hash for creating valid_attributes
+* correct the dependencies in the gemspec file
+
 0.0.3 2012-02-01
 
 * Remove the 'it' so 'it' can be placed higher up to catch interrupts
