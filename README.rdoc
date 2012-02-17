@@ -1,6 +1,6 @@
 = SpecSupport
 
-= check_all_columns
+## check_all_columns
 
 After building a factory that fills out all the
 attributes (columns) of an ActiveRecord model,
@@ -28,3 +28,20 @@ Example usage:
     end
 
   end
+
+## delete_nil_values
+
+In default Rspec controller specs, default values
+are required. A nice way to produce them automatically
+from the FactoryGirl factories is:
+
+  def valid_attributes
+    FactoryGirl.build(:full_contact).delete_nil_values
+  end
+
+The reason the nil values need to be removed is to allow
+some default key (e.g. created_at etc.) to be set by
+ActiveRecord when executing the create in the controller.
+Specifically, without the delete_nil_values, this error results:
+
+  null value in column "created_at" violates not-null constraint
