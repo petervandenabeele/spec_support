@@ -1,6 +1,6 @@
 = SpecSupport
 
-## check_all_columns
+== check_all_columns
 
 After building a factory that fills out all the
 attributes (columns) of an ActiveRecord model,
@@ -29,7 +29,7 @@ Example usage:
 
   end
 
-## delete_nil_values
+== delete_nil_values
 
 In default Rspec controller specs, default values
 are required. A nice way to produce them automatically
