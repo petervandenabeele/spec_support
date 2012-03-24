@@ -1,3 +1,9 @@
+0.0.6 2012-03-25
+
+* Remove the dependency on jruby-openssl since form MRI Ruby this
+  leads to  a LoadError: cannot load such file -- jopenssl
+  (will probably make a separate gem for jruby)
+
 0.0.5 2012-03-24
 
 * use proper LOAD_PATH so that Jruby can avoid use of require_relative
