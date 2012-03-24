@@ -1,1 +1,1 @@
-rvm use --create 1.9.3@spec_support
+rvm use --create jruby@spec_support
