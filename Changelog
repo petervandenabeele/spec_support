@@ -1,6 +1,10 @@
+0.0.7 2012-05-04
+
+* print a warning on empty value for a column
+
 0.0.6 2012-03-25
 
-* Remove the dependency on jruby-openssl since form MRI Ruby this
+* Remove the dependency on jruby-openssl since from MRI Ruby this
   leads to  a LoadError: cannot load such file -- jopenssl
   (will probably make a separate gem for jruby)
 
