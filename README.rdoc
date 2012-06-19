@@ -36,7 +36,7 @@ are required. A nice way to produce them automatically
 from the FactoryGirl factories is:
 
   def valid_attributes
-    FactoryGirl.build(:full_contact).delete_nil_values
+    FactoryGirl.build(:full_contact).attributes.delete_nil_values
   end
 
 The reason the nil values need to be removed is to allow
@@ -45,3 +45,14 @@ ActiveRecord when executing the create in the controller.
 Specifically, without the delete_nil_values, this error results:
 
   null value in column "created_at" violates not-null constraint
+
+== factory_hash
+
+This is a combined function that executes the
+
+  .attributes.delete_nil_values
+
+shown above as valid_attributes on a ActiveRecord model
+(typically produced with FactoryGirl)
+
+
