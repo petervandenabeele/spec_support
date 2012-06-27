@@ -20,11 +20,16 @@ describe "delete_nil_values" do
 
 end
 
-describe "factory_hash" do
+describe "present_attributes" do
 
   it "yields a non_nil values" do
     m = OpenStruct.new(:attributes => {:a => 'c', :b => nil})
-    factory_hash(m).should == {:a => 'c'}
+    SpecSupport.present_attributes(m).should == {:a => 'c'}
+  end
+
+  it "is not defined on Object" do
+    m = OpenStruct.new(:attributes => {:a => 'c', :b => nil})
+    lambda {Object.new.present_attributes(m)}.should raise_error
   end
 
 end

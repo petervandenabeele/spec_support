@@ -46,13 +46,13 @@ Specifically, without the delete_nil_values, this error results:
 
   null value in column "created_at" violates not-null constraint
 
-== factory_hash
+== present_attributes
 
-This is a combined function that executes the
+  SpecSupport.present_attributes(m)
 
-  .attributes.delete_nil_values
+is a combined function that executes
+
+  m.attributes.delete_nil_values
 
 shown above as valid_attributes on a ActiveRecord model
 (typically produced with FactoryGirl)
-
-

@@ -6,9 +6,9 @@ class Hash
 
 end
 
-class Object
+module SpecSupport
 
-  def factory_hash(m)
+  def self.present_attributes(m)
     m.attributes.delete_nil_values
   end
 
