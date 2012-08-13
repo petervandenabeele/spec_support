@@ -19,4 +19,14 @@ describe "has_query_params?" do
     t.has_query_params?("key", "value").should be_true
   end
 
+  it "does not match subpart of value" do
+    t = TestForSpecSupport.new("key=values")
+    t.has_query_params?("key", "value").should be_false
+  end
+
+  it "does not match subpart of key" do
+    t = TestForSpecSupport.new("skey=value")
+    t.has_query_params?("key", "value").should be_false
+  end
+
 end
