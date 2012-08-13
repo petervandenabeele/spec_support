@@ -79,6 +79,16 @@ describe "has_query_params?" do
     t.has_query_params?("key", "value").should be_true
   end
 
+  it "does not match subpart of key delimited by ?" do
+    t = TestForSpecSupport.new("?skey=values")
+    t.has_query_params?("key", "value").should be_false
+  end
+
+  it "does match key delimited by ?" do
+    t = TestForSpecSupport.new("?key=value")
+    t.has_query_params?("key", "value").should be_true
+  end
+
   it "does match with regexp special chars" do
     t = TestForSpecSupport.new("key=val-+{ue")
     t.has_query_params?("key", "val-+{ue").should be_true

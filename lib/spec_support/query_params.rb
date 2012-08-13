@@ -5,7 +5,7 @@ module SpecSupport
       return false unless k && k.match(/[^\s]/)
       k_esc = Regexp.escape(k)
       v_esc = Regexp.escape(v)
-      r = Regexp.new("(^|&|&amp;)#{k_esc}=#{v_esc}($|&|&amp;|\")")
+      r = Regexp.new("(^|&|&amp;|[?])#{k_esc}=#{v_esc}($|&|&amp;|\")")
       r.match(self)
     end
 
