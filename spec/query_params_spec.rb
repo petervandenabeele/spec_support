@@ -69,4 +69,10 @@ describe "has_query_params?" do
     t.has_query_params?("key", "value").should be_true
   end
 
+  it "does match with regexp special chars" do
+    t = TestForSpecSupport.new("key=val-+{ue")
+    t.has_query_params?("key", "val-+{ue").should be_true
+  end
+
+
 end
