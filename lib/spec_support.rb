@@ -6,5 +6,6 @@ module SpecSupport
 
   require 'check_all_columns'
   require 'delete_nil_values'
+  require 'query_params'
 
 end
