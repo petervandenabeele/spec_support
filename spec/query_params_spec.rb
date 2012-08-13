@@ -14,4 +14,9 @@ describe "has_query_params?" do
     t.has_query_params?(nil,nil).should be_false
   end
 
+  it "has simple key-value pair" do
+    t = TestForSpecSupport.new("key=value")
+    t.has_query_params?("key", "value").should be_true
+  end
+
 end
