@@ -49,4 +49,24 @@ describe "has_query_params?" do
     t.has_query_params?("key", "value").should be_true
   end
 
+  it "does not match subpart of value delimited by &amp;" do
+    t = TestForSpecSupport.new("key=values&amp;")
+    t.has_query_params?("key", "value").should be_false
+  end
+
+  it "does match value delimited by &amp;" do
+    t = TestForSpecSupport.new("key=value&amp;a=b")
+    t.has_query_params?("key", "value").should be_true
+  end
+
+  it "does not match subpart of key delimited by &amp;" do
+    t = TestForSpecSupport.new("&amp;skey=values")
+    t.has_query_params?("key", "value").should be_false
+  end
+
+  it "does match key delimited by &amp;" do
+    t = TestForSpecSupport.new("a=b&amp;key=value")
+    t.has_query_params?("key", "value").should be_true
+  end
+
 end
