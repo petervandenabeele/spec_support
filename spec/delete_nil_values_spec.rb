@@ -22,7 +22,7 @@ end
 
 describe "present_attributes" do
 
-  it "yields a non_nil values" do
+  it "yields all non_nil values" do
     m = OpenStruct.new(:attributes => {:a => 'c', :b => nil})
     SpecSupport.present_attributes(m).should == {:a => 'c'}
   end
