@@ -74,5 +74,4 @@ describe "has_query_params?" do
     t.has_query_params?("key", "val-+{ue").should be_true
   end
 
-
 end
