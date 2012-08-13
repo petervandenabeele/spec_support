@@ -56,3 +56,14 @@ is a combined function that executes
 
 shown above as valid_attributes on a ActiveRecord model
 (typically produced with FactoryGirl)
+
+== has_query_params?
+
+in a spec do:
+
+  class String
+    include SpecSupport::QueryParams
+  end
+
+  URI.unescape(rendered).should have_query_params(
+    "f[key][]", "value+with+spaces")
