@@ -1,5 +1,8 @@
 = SpecSupport
 
+Depends on ActiveModel (and implictly on ActiveRecord
+for the check_all_columns functioality).
+
 == check_all_columns
 
 After building a factory that fills out all the
@@ -67,3 +70,12 @@ in a spec do:
 
   URI.unescape(rendered).should have_query_params(
     "f[key][]", "value+with+spaces")
+
+== has_error_key?
+
+in a spec do:
+
+  subject.errors.should have_error_key(:name, :blank)
+
+to validate that the "name" attribute violates the presence
+validation (and has exactly _that_ error).

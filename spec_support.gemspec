@@ -17,7 +17,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_development_dependency "rspec"
+  s.add_development_dependency 'rspec'
+  s.add_runtime_dependency 'activemodel'
 
   # to execute `rake release` from a jruby environment, uncomment line below
   # s.add_dependency "jruby-openssl"
